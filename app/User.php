@@ -15,8 +15,10 @@ class User extends Authenticatable
      *
      * @var array
      */
+
+     //esto es lo que se ingresa manuel a la base de datos
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','url'
     ];
 
     /**
