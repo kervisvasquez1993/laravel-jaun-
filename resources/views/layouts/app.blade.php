@@ -71,10 +71,15 @@
                 </div>
             </div>
         </nav>
+        <div class="container">
+            <div class="row">
+                @yield('botones')
+                <main class="py-4 col-12">
+                    @yield('content')
+                </main>
+            </div>
+        </div>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
     </div>
 </body>
 </html>

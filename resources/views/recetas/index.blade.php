@@ -1,3 +1,9 @@
 @extends('layouts.app');
-<h1>recetas</h1>
-<p>hola desde index recetas</p>
+@section('botones')
+    <a href="" class=""></a>
+@endsection
+
+@section('content')
+<h1>Recetas</h1>
+@endsection
+
