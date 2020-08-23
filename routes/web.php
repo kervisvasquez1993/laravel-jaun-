@@ -21,6 +21,7 @@ Route::get('/', function () {
 
 
 Route::get('/recetas', 'RecetaController@index');
+Route::get('/recetas/create', 'RecetaController@create');
 
 
 Auth::routes();
