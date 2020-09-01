@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\c;
 use Illuminate\Http\Request;
+use App\Receta;
+use Illuminate\Support\Facades\DB;
 
 class RecetaController extends Controller
 {
@@ -35,7 +37,15 @@ class RecetaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = request()->validate([
+            'titulo' => 'required'
+        ]); // pasamos todos los valores que traiamos de $request en $data
+        DB::table('recetas')->insert([
+            'titulo' => $data['titulo']
+        ]);
+
+        //redireccionar
+        return redirect()->action('RecetaController@index');
     }
 
     /**
