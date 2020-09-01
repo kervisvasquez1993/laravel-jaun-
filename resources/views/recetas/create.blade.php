@@ -13,10 +13,17 @@
                      <label for="titulo">Titulo Elemento</label>
                      <input type="text"
                             name="titulo"
-                            class="form-group"
+                            class="form-group @error('titulo') is-invalid @enderror"
                             id="titulo"
                             placeholder="Titulo Elemento"
+                            value="{{@old('titulo')}}"
                      >
+                    @error('titulo')
+                      <span class="invalid-feedback d-block" role="alert">
+                        <strong> {{$message}}</strong>
+                      </span>
+                    @enderror
+
                 </div>
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary" value="Agregar elemento">
