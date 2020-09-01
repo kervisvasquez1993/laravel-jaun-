@@ -4,7 +4,7 @@
 @endsection
 
 @section('content')
- <h2 class="text-center mb-5"> Administra tus Elementos/h2>
+ <h2 class="text-center mb-5"> Administra tus Elementos </h2>
     <div class="col-md-10 mx-auto bg-white p-3">
         <table class="table">
             <thead class="bg-primary text-light">

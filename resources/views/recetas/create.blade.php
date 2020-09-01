@@ -5,25 +5,23 @@
 
 @section('content')
     <h2 class="text-center mb-5">Crear Nueva elemento</h2>
-    <div class="col-md-10 mx-auto bg-white p-3">
-        <table class="table">
-            <thead class="bg-primary text-light">
-            <tr>
-                <th>Titulo</th>
-                <th>Categoría</th>
-                <th>Acciones</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tdody>
-                <tr>
-                    <td>Pizza</td>
-                    <td>Pizza</td>
-                    <td></td>
-                </tr>
-            </tdody>
-            </tbody>
-        </table>
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-8">
+            <form method="post">
+                <div class="form-group">
+                     <label for="titulo">Titulo Elemento</label>
+                     <input type="text"
+                            name="titulo"
+                            class="form-group"
+                            id="titulo"
+                            placeholder="Titulo Elemento"
+                     >
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
     </div>
 @endsection
 
