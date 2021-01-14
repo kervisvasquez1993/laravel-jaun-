@@ -51,10 +51,10 @@ class RecetaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\c  $c
+     * @param  \App\$c
      * @return \Illuminate\Http\Response
      */
-    public function show(c $c)
+    public function show( $c)
     {
         //
     }
@@ -65,7 +65,7 @@ class RecetaController extends Controller
      * @param  \App\c  $c
      * @return \Illuminate\Http\Response
      */
-    public function edit(c $c)
+    public function edit( $c)
     {
         //
     }
@@ -77,7 +77,7 @@ class RecetaController extends Controller
      * @param  \App\c  $c
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, c $c)
+    public function update(Request $request, $c)
     {
         //
     }
@@ -88,7 +88,7 @@ class RecetaController extends Controller
      * @param  \App\c  $c
      * @return \Illuminate\Http\Response
      */
-    public function destroy(c $c)
+    public function destroy( $c)
     {
         //
     }
