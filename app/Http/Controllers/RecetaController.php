@@ -9,6 +9,13 @@ use Illuminate\Support\Facades\DB;
 
 class RecetaController extends Controller
 {
+    //agregar mideware para autenticacion
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -37,8 +44,9 @@ class RecetaController extends Controller
      */
     public function store(Request $request)
     {
+
         $data = request()->validate([
-            'titulo' => 'required | min:6 '
+            'titulo' => 'required | min:6'
         ]); // pasamos todos los valores que traiamos de $request en $data
         DB::table('recetas')->insert([
             'titulo' => $data['titulo']
@@ -62,7 +70,7 @@ class RecetaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\c  $c
+     * @param  \App\$c
      * @return \Illuminate\Http\Response
      */
     public function edit( $c)
