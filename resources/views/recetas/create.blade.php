@@ -9,7 +9,7 @@
 @section('content')
     <h2 class="text-center mb-5">Crear Nueva elemento</h2>
 
-    {{$categorias}}
+    {{-- {{$categorias}} --}}
 
     <div class="row justify-content-center mt-5">
         <div class="col-md-8">
@@ -61,26 +61,48 @@
                 <div class="form-group mt-4">
                     <label for="preparacion">Preparacion</label>
                     <input type="hidden" id="preparacion" name="preparacion" value="{{old('validacion')}}">
-                    <trix-editor input="preparacion"></trix-editor>
-                </div>
-
-                @error('preparacion')
+                    <trix-editor
+                    class="form-control @error('preparacion') is-invalid @enderror"
+                    input="preparacion"></trix-editor>
+                    @error('preparacion')
                     <span class="invalid-feedback d-block" role="alert">
                         <strong> {{$message}}</strong>
                       </span>
                     @enderror
+                </div>
+
+                
 
                 <div class="form-group mt-4">
-                    <label for="ingredientes">Ingredientes</label>
+                    <label for="ingredientes">ingredientes</label>
                     <input type="hidden" id="ingredientes" name="ingredientes" value="{{old('validacion')}}">
-                    <trix-editor input="ingredientes"></trix-editor>
-                </div>
-
-                @error('ingrediente')
+                    <trix-editor
+                    class="form-control @error('ingredientes') is-invalid @enderror"
+                    input="ingredientes"></trix-editor>
+                    @error('ingredientes')
                     <span class="invalid-feedback d-block" role="alert">
                         <strong> {{$message}}</strong>
                       </span>
                     @enderror
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="imagen">Imagen</label>
+                    <input 
+                         type="file"
+                         id="imagen"
+                         class="form-control @error('imagen') is-invalid @enderror"
+                         name="imagen"
+                         >
+                         @error('imagen')
+                         <span class="invalid-feedback d-block" role="alert">
+                             <strong> {{$message}}</strong>
+                           </span>
+                         @enderror
+                </div>
+
+               
+
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary" value="Agregar elemento">
                 </div>
