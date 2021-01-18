@@ -10932,6 +10932,10 @@ body {
   font-family: "Red Rose", cursive;
 }
 
+trix-editor {
+  min-height: 400px;
+}
+
 .bg-primary .navbar-brand {
   color: white;
   font-size: 1.5rem;
