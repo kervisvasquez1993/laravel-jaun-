@@ -13,7 +13,7 @@
 
     <div class="row justify-content-center mt-5">
         <div class="col-md-8">
-            <form method="post" action="{{route('recetas.store')}}" novalidate>
+            <form method="post" action="{{route('recetas.store')}}" enctype="multipart/form-data" novalidate>
                 @csrf
                 <div class="form-group">
                      <label for="titulo">Titulo Elemento</label>

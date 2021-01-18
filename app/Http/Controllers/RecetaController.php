@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\c;
-use Illuminate\Http\Request;
 use App\Receta;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+use Intervention\Image\Facades\Image;
 
 class RecetaController extends Controller
 {
@@ -57,11 +58,16 @@ class RecetaController extends Controller
             'ingredientes' => 'required | ',
             /* 'imagen' => 'required | image | ', */
         ]); // pasamos todos los valores que traiamos de $request en $data
+        //obtener la ruta de la imagen
+        $ruta_imagen = $request['imagen']->store('upload-recetas', 'public');
+        //resize de imagenes
+        $img = Image::make(public_path("storage/${ruta_imagen}"))->fit(1200,500);
+        $img->save();
         DB::table('recetas')->insert([
             'titulo' => $data['titulo'],
             'ingredientes' => $data['ingredientes'],
             'preparacion' => $data['preparacion'],
-            'imagen' => 'imagen.jpg',
+            'imagen' => $ruta_imagen,
             'user_id' => Auth::user()->id,
             'categoria_id' => $data['categoria'],
         ]);
