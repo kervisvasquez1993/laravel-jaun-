@@ -168,8 +168,15 @@ class RecetaController extends Controller
      * @param  \App\c  $c
      * @return \Illuminate\Http\Response
      */
-    public function destroy( $c)
+    public function destroy( Receta $receta)
     {
-        //
+        
+        //ejecutar el policy
+        $this->authorize('delete', $receta);
+
+        $receta->delete();
+
+        return redirect()->action('RecetaController@index');
+        
     }
 }
