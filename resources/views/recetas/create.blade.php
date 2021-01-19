@@ -41,12 +41,12 @@
                         id="categoria"
                     >
                         <option value=""> Seleccione
-                            @foreach($categorias as $id => $categoria)
+                            @foreach($categorias as  $categoria)
                                 <option
-                                 value="{{$id}}"
-                                 {{old('categoria') == $id ? 'selected' : ''}}
+                                 value="{{$categoria->id}}"
+                                 {{old('categoria') == $categoria->id ? 'selected' : ''}}
                                  >
-                                 {{$categoria}}
+                                 {{$categoria->nombre}}
                                 </option>
                             @endforeach
                         </option>
