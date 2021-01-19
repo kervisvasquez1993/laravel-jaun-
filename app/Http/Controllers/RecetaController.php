@@ -111,9 +111,13 @@ class RecetaController extends Controller
      * @param  \App\$receta
      * @return \Illuminate\Http\Response
      */
-    public function edit( $c)
+    public function edit( Receta $receta)
     {
-        //
+       // con modelo 
+       $categorias = CategoriaRecetas::all(['id','nombre']);
+        return view('recetas.edit')
+                ->with('categorias', $categorias)
+                ->with('receta', $receta);
     }
 
     /**
