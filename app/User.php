@@ -38,4 +38,11 @@ class User extends Authenticatable implements  MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**relacion de 1:n de usuarios de recetas */
+    public function recetas()
+    {
+        return $this->hasMany(Receta::class);
+    }
+
 }

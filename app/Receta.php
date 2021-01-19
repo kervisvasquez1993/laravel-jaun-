@@ -6,5 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Receta extends Model
 {
-    //
+    // hasOne
+    // hasMany
+    //belongsToMany
+        /**------- */
+
+    // belongsTo
+    // belognsTo
+    // belongsToMany
 }

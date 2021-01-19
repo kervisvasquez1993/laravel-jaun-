@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\c;
 use App\Receta;
+use App\CategoriaRecetas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -25,7 +26,10 @@ class RecetaController extends Controller
      */
     public function index()
     {
-        return  view('recetas.index');
+        /* Auth::user()->recetas->dd(); */
+        /* auth()->user()->recetas->dd(); */
+        $recetas = auth()->user()->recetas;
+        return  view('recetas.index')->with('recetas', $recetas);
     }
 
     /**
@@ -36,9 +40,11 @@ class RecetaController extends Controller
     public function create()
     {
        /*  DB::table('categoria_receta')->get()->pluck('nombre','id')->dd(); */
-        $categorias = DB::table('categoria_receta')->get()->pluck('nombre','id');
+       // obtener categoria sin modelo
+       // $categorias = DB::table('categoria_receta')->get()->pluck('nombre','id');
 
-
+        // con modelo 
+        $categorias = CategoriaRecetas::all(['id','nombre'])->dd();
         return view('recetas.create')->with('categorias', $categorias);
     }
 
