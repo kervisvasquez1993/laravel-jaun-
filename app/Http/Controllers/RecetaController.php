@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\c;
+
 use App\Receta;
 use App\CategoriaRecetas;
 use Illuminate\Http\Request;
@@ -95,18 +95,20 @@ class RecetaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\$c
+     * @param  \App\$receta
      * @return \Illuminate\Http\Response
      */
-    public function show( $c)
+    public function show( Receta $receta)
     {
-        //
+        
+        return view('recetas.show')
+               ->with('receta', $receta);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\$c
+     * @param  \App\$receta
      * @return \Illuminate\Http\Response
      */
     public function edit( $c)
