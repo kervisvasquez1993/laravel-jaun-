@@ -127,9 +127,9 @@ class RecetaController extends Controller
      * @param  \App\c  $c
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $c)
+    public function update(Request $request, Receta $receta)
     {
-        //
+        return "editando";
     }
 
     /**
