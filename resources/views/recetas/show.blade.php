@@ -19,16 +19,19 @@
             <span class="font-weigth-bold text-primary">
                 Fecha:
             </span>
-
-            {{$receta->created_at}}
+            @php
+             $fecha = $receta->created_at
+            @endphp
+            {{-- {{$receta->created_at}} --}}
         </p>
+        <fecha-receta fecha="{{$fecha}}"></fecha-receta>
 
         <p>
             <span class="font-weigth-bold text-primary">
                 Autor:
             </span>
             {{-- Mostrar el usuario --}}
-            {{$receta->user_id}}
+            {{$receta->autor->name}}
         </p>
         <div class="ingrediente">
             <h3 class="my-3 text-primary">
