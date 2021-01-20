@@ -26,6 +26,19 @@ class User extends Authenticatable implements  MustVerifyEmail
      *
      * @var array
      */
+
+     // evento que se ejecuta cuando un usuario es creado
+
+     protected static function boot()
+     {
+         parent::boot();
+         // asignar pefil una vez se haya creado
+
+         static::created(function($user)
+         {
+            $user->perfil()->create();
+         });
+     }
     protected $hidden = [
         'password', 'remember_token',
     ];
@@ -43,6 +56,13 @@ class User extends Authenticatable implements  MustVerifyEmail
     public function recetas()
     {
         return $this->hasMany(Receta::class);
+    }
+
+    /* relacion de uno a uno de perfil y user  */
+
+    public function perfil()
+    {
+        return $this->hasOne(Perfil::class);
     }
 
 }
