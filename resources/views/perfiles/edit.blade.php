@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
- {{-- <h3>{{$perfil}}</h3>  --}}
+ {{-- <h3>{{$perfil}}</h3>   --}}
 <h3 class="text-center">Editando perfil : {{$perfil->usuario->name}}</h3>
 
 <div class="row justify-content-center mt-5">
@@ -73,7 +73,7 @@
                     @if($perfil->imagen)
                     <div class="mt-4">
                         <p>imagen actual</p>
-                       {{--  <img src="/storage/{{$receta->imagen}}" style="width: 300px" alt=""> --}}
+                        <img src="/storage/{{$perfil->imagen}}" style="width: 300px" alt=""> 
                     </div>
                     @endif
                      
