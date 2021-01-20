@@ -10934,6 +10934,7 @@ body {
 
 trix-editor {
   min-height: 400px;
+  background: blue;
 }
 
 .bg-primary .navbar-brand {
