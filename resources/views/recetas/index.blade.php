@@ -1,6 +1,9 @@
-@extends('layouts.app');
+@extends('layouts.app')
+{{Auth::user()}}
 @section('botones')
-    <a href="{{route('recetas.create')}}" class="btn btn-primary text-white">Crear Elementos</a>
+    <a href="{{route('recetas.create')}}" class="btn btn-outline-primary text-uppercase font-weight-bold">Crear Elementos</a>
+    <a href="{{route('perfiles.edit', ['perfil' => $usuario->id] )}}" class="btn btn-outline-success text-uppercase font-weight-bold">Editar Perfil</a>
+    <a href="{{route('perfiles.show', ['perfil' => Auth::user()->id] )}}" class="btn btn-outline-info text-uppercase font-weight-bold">Ver Perfil</a>
 @endsection
 
 @section('content')
