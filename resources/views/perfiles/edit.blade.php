@@ -49,7 +49,7 @@
                       </span>
                     @enderror
             </div>
-            <div class="form-group mt-4">
+            <div class="form-group mt-4 editor">
                 <label for="biografia">Biografia</label>
                 <input type="hidden" id="biografia" name="biografia"  value="{{$perfil->biografia}}">
                 <trix-editor

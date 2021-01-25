@@ -32,6 +32,9 @@ class PerfilPolicy
     {
         //
         return $user->id == $perfil->user_id;
+
+        // bloquea ciertas vistas   
+        
     }
 
     /**

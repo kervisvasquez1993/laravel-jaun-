@@ -117,6 +117,8 @@ class RecetaController extends Controller
     public function edit( Receta $receta)
     {
        // con modelo 
+
+       $this->authorize('view', $receta);
        $categorias = CategoriaRecetas::all(['id','nombre']);
         return view('recetas.edit')
                 ->with('categorias', $categorias)

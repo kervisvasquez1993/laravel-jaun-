@@ -20,7 +20,6 @@ class UsuarioSeeder extends Seeder
             'url' => 'http://kervisvasquez.online',
         ]);
        
-        $user->perfil()->create();
         
         
         $user2 = User::create([
@@ -30,6 +29,6 @@ class UsuarioSeeder extends Seeder
             'url' => 'http://kervisvasquez.online',
         ]);
        
-        $user2->perfil()->create();
+       
     }
 }

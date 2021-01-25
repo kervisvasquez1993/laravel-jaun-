@@ -85,7 +85,7 @@ class PerfilController extends Controller
        //ejecutar controler
 
 
-       $this->authorize('update', $perfil);
+       /* $this->authorize('update', $perfil); */
         // validar
         $data = request()->validate([
             'nombre' => 'required',
