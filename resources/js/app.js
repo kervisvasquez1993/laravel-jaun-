@@ -26,7 +26,8 @@ Vue.use(VueSweetalert2)
 Vue.config.ignoredElements = ['trix-editor', 'trix-toolbar'];
 Vue.component('fecha-receta', require('./components/FechaReceta.vue').default)
 Vue.component('eliminar-receta', require('./components/EliminarReceta.vue').default)
-console.log(Vue.prototype)
+Vue.component('like-buttom', require('./components/LikeButtom.vue').default)
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -36,3 +37,7 @@ console.log(Vue.prototype)
 const app = new Vue({
     el: '#app',
 });
+
+$('.like-btn').on('click', function() {
+    $(this).toggleClass('like-active');
+ });

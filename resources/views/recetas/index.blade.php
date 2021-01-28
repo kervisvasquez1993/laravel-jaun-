@@ -42,6 +42,7 @@
                 </tdody>
             </tbody>
         </table>
+        
         {{$recetas->links()}}
     </div>
 @endsection
