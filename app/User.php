@@ -65,4 +65,10 @@ class User extends Authenticatable implements  MustVerifyEmail
         return $this->hasOne(Perfil::class);
     }
 
+    // recetas que usuarios le a dado me gusta
+    public function meGusta()
+    {
+        return $this->belongsToMany(Receta::class, 'like_receta');
+    }
+
 }
