@@ -25,5 +25,33 @@
         </div>
     </div>
 </div>
+<h2 class="text-center my-5">
+    Recetas Creada por {{$perfil->usuario->name}}    
+</h2>
+<div class="container">
+    <div class="row max-auto bg-white p-4">
+        @if(count($recetas) > 0)
+            @foreach($recetas as $receta)
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <h3>
+                            <img src="/storage/{{$receta->imagen}}" class="card-img-top" alt="imagen receta">
+                            
+                            <div class="card-body">
+                                {{$receta->titulo}}
+                                <a href="{{route('recetas.show', ['receta' => $receta->id])}}" class="btn btn-primary d-block mt-4 text-uppercase font-weight-bold">Ver Receta</a>
+                            </div>
+                        </h3>
+                    </div>
+                </div>
+            @endforeach
+        @else
+            <p class="text-center w-100"> NO HAY RECETAS</p>
+        @endif
+
+        {{$recetas->links()}}
+    </div>
+</div>
+
 
 @endsection

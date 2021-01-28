@@ -47,4 +47,5 @@
         </div>
     </div>
 </article>
+
 @endsection

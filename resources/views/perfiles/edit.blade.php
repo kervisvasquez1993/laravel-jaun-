@@ -20,7 +20,7 @@
             @csrf
             @method('put')
             <div class="form-group">
-                    <label for="nombre"> Nombre</label>
+                    <label for="nombre"> Nombre Completo</label>
                     <input type="text"
                            name="nombre"
                            class="form-group @error('nombre') is-invalid @enderror"
@@ -92,4 +92,5 @@
 @endsection
 @section('script')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.1/trix.js" integrity="sha512-/1nVu72YEESEbcmhE/EvjH/RxTg62EKvYWLG3NdeZibTCuEtW5M4z3aypcvsoZw03FAopi94y04GhuqRU9p+CQ==" crossorigin="anonymous" defer></script>
+
 @endsection
