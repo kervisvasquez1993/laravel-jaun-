@@ -44,6 +44,22 @@
         </table>
         
         {{$recetas->links()}}
+
+       {{--  {{$usuario->meGusta}} --}}
+        <h2 class="text-center-my-5">
+            Recetas Me Gusta
+        </h2>
+        <div class="col-md-10 mx-auto bg-white p-3">
+            <ul class="list-group">
+                @foreach($usuario->meGusta as $receta)
+                    <li-list-group-item class="d-flex justify-content-betwenn align-items-center">
+                        <p>
+                            {{$receta->titulo}}
+                        </p>
+                    </li-list-group-item>
+                @endforeach
+            </ul>
+        </div>
     </div>
 @endsection
 

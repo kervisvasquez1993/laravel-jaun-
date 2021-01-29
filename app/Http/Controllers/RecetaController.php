@@ -31,16 +31,18 @@ class RecetaController extends Controller
         /* auth()->user()->recetas->dd(); */
         
         
-        $usuario = auth()->user()->id;
+        $usuario = auth()->user();
         /*$recetas = auth()->user()->recetas; */
 
         //traer usuario
 
+        /* $meGusta = auth()->user()->meGusta; */
         /* $usuario = auth()->user->id; */
-        $recetas = Receta::where('user_id', $usuario)->paginate(3);
+        $recetas = Receta::where('user_id', $usuario->id)->paginate(3);
         return  view('recetas.index')
                 ->with('recetas', $recetas)
-                ->with('usuario', $usuario);
+                ->with('usuario', $usuario)
+                /* ->with('meGusta', $meGusta) */;
     }
 
     /**
@@ -74,7 +76,8 @@ class RecetaController extends Controller
             'preparacion' => 'required | ',
             'ingredientes' => 'required | ',
             /* 'imagen' => 'required | image | ', */
-        ]); // pasamos todos los valores que traiamos de $request en $data
+        ]); 
+        // pasamos todos los valores que traiamos de $request en $data
         //obtener la ruta de la imagen
         $ruta_imagen = $request['imagen']->store('upload-recetas', 'public');
         //resize de imagenes
@@ -110,9 +113,16 @@ class RecetaController extends Controller
      */
     public function show( Receta $receta)
     {
+        // obtener si el usuario actual le gusta la receta y si esta autenticado
+
+        $like = ( auth()->user() ) ? auth()->user()->meGusta->contains($receta->id)  : false;
         
+        $likes = $receta->likes->count();
         return view('recetas.show')
-               ->with('receta', $receta);
+               ->with('receta', $receta)
+               ->with('like', $like)
+               ->with('likes', $likes)
+               ;
     }
 
     /**
