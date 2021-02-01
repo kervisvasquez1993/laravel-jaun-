@@ -79082,15 +79082,14 @@ __webpack_require__.r(__webpack_exports__);
 /*!************************************************!*\
   !*** ./resources/js/components/LikeButtom.vue ***!
   \************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _LikeButtom_vue_vue_type_template_id_2a8e0e53___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LikeButtom.vue?vue&type=template&id=2a8e0e53& */ "./resources/js/components/LikeButtom.vue?vue&type=template&id=2a8e0e53&");
 /* harmony import */ var _LikeButtom_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LikeButtom.vue?vue&type=script&lang=js& */ "./resources/js/components/LikeButtom.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _LikeButtom_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _LikeButtom_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -79120,7 +79119,7 @@ component.options.__file = "resources/js/components/LikeButtom.vue"
 /*!*************************************************************************!*\
   !*** ./resources/js/components/LikeButtom.vue?vue&type=script&lang=js& ***!
   \*************************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -79155,7 +79154,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleNotFoundError: Module not found: Error: Can't resolve '../images/bgimagen.jpg' in '/var/www/html/laravel-jaun-/resources/sass'\n    at /var/www/html/laravel-jaun-/node_modules/webpack/lib/Compilation.js:925:10\n    at /var/www/html/laravel-jaun-/node_modules/webpack/lib/NormalModuleFactory.js:401:22\n    at /var/www/html/laravel-jaun-/node_modules/webpack/lib/NormalModuleFactory.js:130:21\n    at /var/www/html/laravel-jaun-/node_modules/webpack/lib/NormalModuleFactory.js:224:22\n    at /var/www/html/laravel-jaun-/node_modules/neo-async/async.js:2830:7\n    at /var/www/html/laravel-jaun-/node_modules/neo-async/async.js:6877:13\n    at /var/www/html/laravel-jaun-/node_modules/webpack/lib/NormalModuleFactory.js:214:25\n    at /var/www/html/laravel-jaun-/node_modules/enhanced-resolve/lib/Resolver.js:213:14\n    at /var/www/html/laravel-jaun-/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/var/www/html/laravel-jaun-/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at /var/www/html/laravel-jaun-/node_modules/enhanced-resolve/lib/UnsafeCachePlugin.js:44:7\n    at /var/www/html/laravel-jaun-/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/var/www/html/laravel-jaun-/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at /var/www/html/laravel-jaun-/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/var/www/html/laravel-jaun-/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:27:1)\n    at /var/www/html/laravel-jaun-/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:67:43\n    at /var/www/html/laravel-jaun-/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/var/www/html/laravel-jaun-/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)\n    at /var/www/html/laravel-jaun-/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/var/www/html/laravel-jaun-/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:27:1)\n    at /var/www/html/laravel-jaun-/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:67:43\n    at /var/www/html/laravel-jaun-/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/var/www/html/laravel-jaun-/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)\n    at /var/www/html/laravel-jaun-/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/var/www/html/laravel-jaun-/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at /var/www/html/laravel-jaun-/node_modules/enhanced-resolve/lib/DirectoryExistsPlugin.js:27:15\n    at /var/www/html/laravel-jaun-/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:85:15\n    at processTicksAndRejections (node:internal/process/task_queues:75:11)");
 
 /***/ }),
 
