@@ -11,6 +11,13 @@ class InicioController extends Controller
 {
     public function index()
     {
+
+        // contar las recetas con la cantidad de votos
+        /* $votada = Receta::has('likes', '=', 1)->get(); */
+
+        $votadas = Receta::withCount('likes')->orderBy('likes_count', 'desc')->take(3)->get();
+
+        return $votadas;
         // obtener las recetas mas nuevas 
         /* $receta = Receta::orderBy('created_at', 'ASC')->get(); */
         /* $receta = Receta::oldest()->get();  los mas nuevo*/

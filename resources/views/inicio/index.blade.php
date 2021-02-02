@@ -45,6 +45,27 @@
                             <h3 class="card-title">
                                 {{$receta->titulo}}
                             </h3>
+                            <div class="meta-receta d-flex justify-content-between">
+                                Fecha:
+                            </span>
+                            @php
+                             $fecha = $receta->created_at
+                            @endphp
+                            {{-- {{$receta->created_at}} --}}
+                            </p class="text-primary fecha font-weight-bold">
+                                <fecha-receta fecha="{{$fecha}}"></fecha-receta>
+                            <p>
+                            <p>
+                                {{count($receta->likes)}} Les gusto
+                            </p>
+                        </div>
+                            <p class="cart-text">
+                                {{Str::words(strip_tags($nueva->preparacion), 10, 'Algo mas..')}}
+                            </p>
+                            <a href="{{route('recetas.show', ['receta' => $receta->id])}}" class="btn btn-primary d-block">
+                                Ver Receta
+                            </a>
+                            
                         </div>
                     </div>
                 @endforeach
